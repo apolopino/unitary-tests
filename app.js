@@ -5,15 +5,17 @@ var oneEuroIs = {
 }
 
 const fromDollarToYen = (usd) => {
-    //code
+    let eur = usd / oneEuroIs['USD']
+    return eur * oneEuroIs['JPY'];
 }
 
 const fromEuroToDollar = (eur) => {
     return eur * oneEuroIs['USD'];
 }
 
-function fromYanToPound(yan) {
-    //code
+function fromYenToPound(yen) {
+    let eur = yen / 127.9;
+    return eur * oneEuroIs['GBP'];
 }
 
-module.exports = { fromEuroToDollar };
+module.exports = { fromEuroToDollar, fromDollarToYen, fromYenToPound };
